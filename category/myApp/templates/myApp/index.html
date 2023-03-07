@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Categories Database:</title>
+</head>
+<body>
+<h2>Database assignment2</h2>
+<p>테이블 생성하기(단, 이미 존재할 경우 생성되지 않음)</p>
+<form action="/create/" method="post">
+    {% csrf_token %}
+    <button type="submit">create</button>
+</form>
+
+<p>테이블에 레코드 추가하기(단, 테이블이 존재할 경우에만 추가할 수 있음)</p>
+<form action="/insert/" method="post">
+    {% csrf_token %}
+    <button type="submit">insert</button>
+</form>
+
+<p>테이블 삭제하기(단, 이미 삭제된 경우 삭제되지 않음)</p>
+<form action="/drop/" method="post">
+    {% csrf_token %}
+    <button type="submit">drop</button>
+</form>
+<p>query result</p>
+<form action="/query/" method="post">
+    {% csrf_token %}
+    <button type="submit">query</button>
+</form>
+
+</body>
+</html>

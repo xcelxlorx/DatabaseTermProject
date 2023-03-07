@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Categories Database:</title>
+</head>
+<body>
+
+<div id='product'>
+    <h2>Product table</h2>
+    <table border='1'>
+    <thead>
+    <tr>
+        <th>Product maker</th>
+        <th>Product model</th>
+        <th>Product type</th>
+    </tr>
+    </thead>
+    {% for product in Product %}
+    <tr>
+        <td>{{ product.maker }}</td>
+        <td>{{ product.model }}</td>
+        <td>{{ product.type }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+<div id='pc'>
+    <h2>Pc table</h2>
+    <table border='1'>
+    <thead>
+    <tr>
+        <th>Pc model</th>
+        <th>Pc speed</th>
+        <th>Pc ram</th>
+        <th>Pc hd</th>
+        <th>Pc price</th>
+    </tr>
+    </thead>
+    {% for pc in Pc %}
+    <tr>
+        <td>{{ pc.model }}</td>
+        <td>{{ pc.speed }}</td>
+        <td>{{ pc.ram }}</td>
+        <td>{{ pc.hd }}</td>
+        <td>{{ pc.price }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+<div id='laptop'>
+    <h2>Laptop table</h2>
+    <table border='1'>
+    <thead>
+    <tr>
+        <th>Laptop model</th>
+        <th>Laptop speed</th>
+        <th>Laptop ram</th>
+        <th>Laptop hd</th>
+        <th>Laptop screen</th>
+        <th>Laptop price</th>
+    </tr>
+    </thead>
+    {% for laptop in Laptop %}
+    <tr>
+        <td>{{ laptop.model }}</td>
+        <td>{{ laptop.speed }}</td>
+        <td>{{ laptop.ram }}</td>
+        <td>{{ laptop.hd }}</td>
+        <td>{{ laptop.screen }}</td>
+        <td>{{ laptop.price }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+<div id='printer'>
+    <h2>Printer table</h2>
+    <table border='1'>
+    <thead>
+    <tr>
+        <th>Printer model</th>
+        <th>Printer color</th>
+        <th>Printer type</th>
+        <th>Printer price</th>
+    </tr>
+    </thead>
+    {% for printer in Printer %}
+    <tr>
+        <td>{{ printer.model }}</td>
+        <td>{{ printer.color }}</td>
+        <td>{{ printer.type }}</td>
+        <td>{{ printer.price }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

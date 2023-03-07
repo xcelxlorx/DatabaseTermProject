@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Categories Database:</title>
+</head>
+<body>
+<div id='query1' >
+    <h2>result 1</h2>
+    <table border='1'>
+    <thead>
+    <tr>
+        <th>AVG(hd)</th>
+    </tr>
+    </thead>
+    {% for i in output1 %}
+    <tr>
+        <td>{{ i.AVG }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+<div id='query2' >
+    <h2>result 2</h2>
+    <table border='1' >
+    <thead>
+    <tr>
+        <th>maker</th>
+        <th>AVG(speed)</th>
+    </tr>
+    </thead>
+    {% for i in output2 %}
+    <tr>
+        <td>{{ i.maker }}</td>
+        <td>{{ i.AVG }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+<div id='query3'>
+    <h2>result 3</h2>
+    <table border='1'>
+    <thead>
+    <tr>
+        <th>maker</th>
+        <th>price</th>
+    </tr>
+    </thead>
+    {% for i in output3 %}
+    <tr>
+        <td>{{ i.maker }}</td>
+        <td>{{ i.price }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+<div id='query4'>
+    <h2>result 4</h2>
+    <table border='1'>
+    <thead>
+    <tr>
+        <th>maker</th>
+        <th>model</th>
+        <th>max(price)</th>
+    </tr>
+    </thead>
+    {% for i in output4 %}
+    <tr>
+        <td>{{ i.maker }}</td>
+        <td>{{ i.model }}</td>
+        <td>{{ i.max }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+<br>
+</body>
+</html>
